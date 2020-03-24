@@ -66,7 +66,7 @@ query indexQuery {
       node {
         slug
         title
-        
+        tags
         publishDate(formatString: "MMMM Do, YYYY")        
         body {
           childMarkdownRemark {

@@ -1,9 +1,12 @@
 import React from "react"
 import Layout from "./layout"
 import CommentArea from "./comment-area"
+import {Link} from 'gatsby'
+import { kebabCase } from 'lodash'
 
 const PostPage = (props) => {
   const post = props.data.contentfulBlogPost
+  const tags = post.tags;
   return (
   <Layout>
     <header className="masthead" style={{backgroundImage: `url('${post.image.file.url}')`}}>
@@ -15,6 +18,18 @@ const PostPage = (props) => {
               <h1>{post.title}</h1>
               <h2 className="subheading">{post.subTitle}</h2>
               <span className="meta">Posted on {post.publishDate}</span>
+              {tags && tags.length ? (
+              <div style={{ marginTop: `4rem` }}>
+                <h4>Tags</h4>
+                <ul className="taglist">
+                  {tags.map(tag => (
+                    <li key={tag + `tag`}>
+                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : null}
             </div>
           </div>
         </div>
