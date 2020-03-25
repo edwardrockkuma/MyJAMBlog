@@ -38,7 +38,7 @@ const CommentArea = (props) => {
 
   const clickHandler = () => {
     let newEntry
-    const clientSpace = clientManage.getSpace('3uaeu4rxc51m')
+    const clientSpace = clientManage.getSpace(process.env.CONTENTFUL_SPACE_ID)
     clientSpace
     .then((space) => space.createEntry('comment', {
       fields: {
