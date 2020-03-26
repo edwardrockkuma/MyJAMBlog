@@ -37,7 +37,7 @@ const PostPage = (props) => {
       </div>
     </header>
     <article style={{minHeight: "500px"}}>
-      <div className="container">
+      <div className="container content"> 
         <div className="row">
           <div className="col-lg-8 col-md-10 mx-auto content-area" dangerouslySetInnerHTML={{
                 __html: post.body.childMarkdownRemark.html,
