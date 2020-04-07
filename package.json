@@ -4,7 +4,7 @@
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
   "author": "Edward Liu <edwardrockrw@gmail.com>",
-  "homepage": "https://github.com/",
+  "homepage": "https://github.com/edwardrockkuma",
   "dependencies": {
     "@primer/css": "^13.1.0",
     "bootstrap": "^4.3.1",
@@ -47,12 +47,5 @@
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "clean": "gatsby clean"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }
